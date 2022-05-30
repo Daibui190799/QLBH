@@ -12,15 +12,18 @@ import java.util.List;
  * @param <EntityType>
  * @param <KeyType>
  */
+abstract public class QLBHDAO<EntityType, KeyType> {
 
-abstract public  class QLBHDAO <EntityType,KeyType> {
-abstract public void insert(EntityType entity);
-abstract public void update(EntityType entity);
-abstract public void delete(KeyType id);
-abstract public EntityType selectebyID (KeyType id);
-abstract public List<EntityType> selectAll();
-abstract public List<EntityType> selectbySql(String sql, Object...args);
-    
+    abstract public void insert(EntityType entity);
+
+    abstract public void update(EntityType entity);
+
+    abstract public void delete(KeyType id);
+
+    abstract public EntityType selectebyID(KeyType id);
+
+    abstract public List<EntityType> selectAll();
+
+    abstract public List<EntityType> selectbySql(String sql, Object... args);
+
 }
-    
-
