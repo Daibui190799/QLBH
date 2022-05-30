@@ -17,8 +17,8 @@ import java.util.logging.Logger;
  *
  * @author Acer
  */
-public class CUSTOMERDAO extends QLBHDAO<CUSTOMER, String>{
-    
+public class CUSTOMERDAO extends QLBHDAO<CUSTOMER, String> {
+
     String INSERT_SQL = "INSERT INTO CUSTOMER ( MAKH,  TENKH,  EMAIL,  DIACHI,  GHICHU) VALUES (?, ?, ?, ?, ?)";
     String UPDATE_SQL = "UPDATE CUSTOMER SET MAKH=?, TENKH=?, EMAIL=?, DIACHI=?, GHICHU=? WHERE MAKH=?";
     String DELETE_SQL = "DELETE FROM CUSTOMER WHERE MAKH=?";
@@ -31,11 +31,11 @@ public class CUSTOMERDAO extends QLBHDAO<CUSTOMER, String>{
             XJdbc.update(INSERT_SQL, entity.getMAKH(),
                     entity.getTENKH(),
                     entity.getEMAIL(),
-                    entity.getDIACHI(),entity.getGHICHU());
+                    entity.getDIACHI(), entity.getGHICHU());
         } catch (SQLException ex) {
             Logger.getLogger(CUSTOMERDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-        }
+    }
 
     @Override
     public void update(CUSTOMER entity) {
@@ -43,10 +43,11 @@ public class CUSTOMERDAO extends QLBHDAO<CUSTOMER, String>{
             XJdbc.update(UPDATE_SQL, entity.getMAKH(),
                     entity.getTENKH(),
                     entity.getEMAIL(),
-                    entity.getDIACHI(),entity.getGHICHU());
+                    entity.getDIACHI(), entity.getGHICHU());
         } catch (SQLException ex) {
             Logger.getLogger(CUSTOMERDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }}
+        }
+    }
 
     @Override
     public void delete(String id) {
@@ -55,35 +56,36 @@ public class CUSTOMERDAO extends QLBHDAO<CUSTOMER, String>{
         } catch (SQLException ex) {
             Logger.getLogger(CUSTOMERDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-         }
+    }
 
     @Override
     public CUSTOMER selectebyID(String id) {
-        List<CUSTOMER> list = this.selectbySql(SELECT_BY_ID_SQL,id);
+        List<CUSTOMER> list = this.selectbySql(SELECT_BY_ID_SQL, id);
         if (list.isEmpty()) {
             return null;
         }
         return list.get(0);
-         }
+    }
 
     @Override
     public List<CUSTOMER> selectAll() {
-       return this.selectbySql(SELECT_ALL_SQL);}
+        return this.selectbySql(SELECT_ALL_SQL);
+    }
 
     @Override
     public List<CUSTOMER> selectbySql(String sql, Object... args) {
-        
+
         List<CUSTOMER> list = new ArrayList<CUSTOMER>();
         try {
             ResultSet rs = XJdbc.query(sql, args);
-            while (rs.next()) {                
+            while (rs.next()) {
                 CUSTOMER entity = new CUSTOMER();
-                    entity.setMAKH(rs.getString("MAKH"));
-                    entity.setTENKH(rs.getString("TENKH"));
-                    entity.setEMAIL(rs.getString("EMAIL"));
-                    entity.setDIACHI(rs.getString("DIACHI"));
-                    entity.setGHICHU(rs.getString("GHICHU"));
-                    
+                entity.setMAKH(rs.getString("MAKH"));
+                entity.setTENKH(rs.getString("TENKH"));
+                entity.setEMAIL(rs.getString("EMAIL"));
+                entity.setDIACHI(rs.getString("DIACHI"));
+                entity.setGHICHU(rs.getString("GHICHU"));
+
                 list.add(entity);
             }
             rs.getStatement().getConnection().close();
@@ -91,8 +93,6 @@ public class CUSTOMERDAO extends QLBHDAO<CUSTOMER, String>{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-    } 
+    }
 
 }
-    
-

@@ -13,12 +13,12 @@ import java.util.logging.Logger;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author Acer
  */
-public class WAREHOUSEDAO extends QLBHDAO<WAREHOUSE, String>{
+public class WAREHOUSEDAO extends QLBHDAO<WAREHOUSE, String> {
+
     String INSERT_SQL = "INSERT INTO WAREHOUSE ( MASP,  TENSP,  SOLUONG,  DONGIA,  HINH, GHICHU) VALUES (?, ?, ?,?, ?, ?)";
     String UPDATE_SQL = "UPDATE WAREHOUSE SET MASP=?, TENSP=?, SOLUONG=?, DONGIA=?, HINH=?, GHICHU=?  WHERE MASP=?";
     String DELETE_SQL = "DELETE FROM WAREHOUSE WHERE MASP=?";
@@ -28,21 +28,22 @@ public class WAREHOUSEDAO extends QLBHDAO<WAREHOUSE, String>{
     @Override
     public void insert(WAREHOUSE entity) {
         try {
-            XJdbc.update(INSERT_SQL, entity.getMASP(),entity.getTENSP(),entity.getSOLUONG(),entity.getDONGIA(),entity.getHINH(),
+            XJdbc.update(INSERT_SQL, entity.getMASP(), entity.getTENSP(), entity.getSOLUONG(), entity.getDONGIA(), entity.getHINH(),
                     entity.getGHICHU());
         } catch (SQLException ex) {
             Logger.getLogger(WAREHOUSEDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-      }
+    }
 
     @Override
     public void update(WAREHOUSE entity) {
-      try {
-            XJdbc.update(UPDATE_SQL, entity.getMASP(),entity.getTENSP(),entity.getSOLUONG(),entity.getDONGIA(),entity.getHINH(),
+        try {
+            XJdbc.update(UPDATE_SQL, entity.getMASP(), entity.getTENSP(), entity.getSOLUONG(), entity.getDONGIA(), entity.getHINH(),
                     entity.getGHICHU());
         } catch (SQLException ex) {
             Logger.getLogger(WAREHOUSEDAO.class.getName()).log(Level.SEVERE, null, ex);
-        }}
+        }
+    }
 
     @Override
     public void delete(String id) {
@@ -51,24 +52,25 @@ public class WAREHOUSEDAO extends QLBHDAO<WAREHOUSE, String>{
         } catch (SQLException ex) {
             Logger.getLogger(WAREHOUSEDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
-}
+    }
 
     @Override
     public WAREHOUSE selectebyID(String id) {
-         List<WAREHOUSE> list = this.selectbySql(SELECT_BY_ID_SQL, id);
+        List<WAREHOUSE> list = this.selectbySql(SELECT_BY_ID_SQL, id);
         if (list.isEmpty()) {
             return null;
         }
         return list.get(0);
-       }
+    }
 
     @Override
     public List<WAREHOUSE> selectAll() {
-         return this.selectbySql(SELECT_ALL_SQL); }
+        return this.selectbySql(SELECT_ALL_SQL);
+    }
 
     @Override
     public List<WAREHOUSE> selectbySql(String sql, Object... args) {
-    List<WAREHOUSE> list = new ArrayList<WAREHOUSE>();
+        List<WAREHOUSE> list = new ArrayList<WAREHOUSE>();
         ResultSet rs;
         try {
             rs = XJdbc.query(sql, args);
@@ -78,9 +80,9 @@ public class WAREHOUSEDAO extends QLBHDAO<WAREHOUSE, String>{
                 entity.setMASP(rs.getString("MASP"));
                 entity.setTENSP(rs.getString("TENSP"));
                 entity.setSOLUONG(rs.getDouble("SOLUONG"));
-                 entity.setDONGIA(rs.getDouble("DONGIA"));
-                   entity.setHINH(rs.getString("HINHANH"));
-                     entity.setGHICHU(rs.getString("GHICHU"));
+                entity.setDONGIA(rs.getDouble("DONGIA"));
+                entity.setHINH(rs.getString("HINHANH"));
+                entity.setGHICHU(rs.getString("GHICHU"));
 
                 list.add(entity);
             }
@@ -91,5 +93,5 @@ public class WAREHOUSEDAO extends QLBHDAO<WAREHOUSE, String>{
         }
 
     }
-    
+
 }
