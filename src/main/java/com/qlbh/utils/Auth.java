@@ -4,14 +4,14 @@
  */
 package com.qlbh.utils;
 
-import com.edusys.entity.NhanVien;
+import com.qlbh.entity.QLNV;
 
 /**
  *
  * @author HAN-PC
  */
 public class Auth {
-    public static NhanVien user = null;
+    public static QLNV user = null;
     public static void clear() {
         Auth.user = null;
     }
@@ -19,6 +19,6 @@ public class Auth {
         return Auth.user != null;
     }
     public static boolean isManager() {
-        return Auth.isLogin() && user.isVaiTro();
+        return Auth.isLogin() && user.isVAITRO();
     }
 }
