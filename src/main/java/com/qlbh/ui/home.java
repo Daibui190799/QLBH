@@ -4,7 +4,12 @@
  */
 package com.qlbh.ui;
 
+import com.qlbh.utils.MsgBox;
 import com.qlbh.utils.XImage;
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  *
@@ -15,8 +20,12 @@ public class home extends javax.swing.JFrame {
     /**
      * Creates new form home
      */
+    private JButton btn_CheckClickMenu = new JButton();
+    private int sizeBorder = 41;
     public home() {
         initComponents();
+        btn_CheckClickMenu = btn_Home;
+        showPanelMenu(pnl_Home);
         
         setLocationRelativeTo(null);
         this.setIconImage(XImage.getAppIcon());
@@ -31,6 +40,7 @@ public class home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         pnl_Acc = new javax.swing.JPanel();
@@ -87,6 +97,8 @@ public class home extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jPanel13 = new javax.swing.JPanel();
 
+        jMenu1.setText("jMenu1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("SHOP MANAGEMENT");
         setBackground(new java.awt.Color(255, 255, 255));
@@ -97,22 +109,26 @@ public class home extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
-        pnl_Acc.setBackground(new java.awt.Color(254, 218, 166));
+        pnl_Acc.setBackground(new java.awt.Color(2, 16, 86));
         pnl_Acc.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 1, new java.awt.Color(0, 0, 0)));
         pnl_Acc.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         lbl_ImageUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/user_120px.png"))); // NOI18N
 
         lbl_Role.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbl_Role.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Role.setText("EMPLOYEE");
 
         lbl_ID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbl_ID.setForeground(new java.awt.Color(255, 255, 255));
         lbl_ID.setText("ID: NV001");
 
         lbl_FullName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbl_FullName.setForeground(new java.awt.Color(255, 255, 255));
         lbl_FullName.setText("FULLNAME: NGUYỄN VĂN TÈO");
 
         lbl_Email.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lbl_Email.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Email.setText("EMAIL: teonv@gmail.com ");
 
         javax.swing.GroupLayout pnl_AccLayout = new javax.swing.GroupLayout(pnl_Acc);
@@ -202,7 +218,7 @@ public class home extends javax.swing.JFrame {
 
         lbl_Slide1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbl_Slide1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl_Slide1.setText("COMING SOON");
+        lbl_Slide1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/slide/slide0.jpg"))); // NOI18N
         pnl_Slide.add(lbl_Slide1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 190));
 
         lbl_Slide2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -242,114 +258,329 @@ public class home extends javax.swing.JFrame {
         pnl_Menu.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(255, 204, 153)));
         pnl_Menu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btn_Home.setBackground(new java.awt.Color(0, 29, 110));
+        btn_Home.setBackground(new java.awt.Color(56, 87, 245));
         btn_Home.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_Home.setForeground(new java.awt.Color(255, 255, 255));
         btn_Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/home_page_40px.png"))); // NOI18N
-        btn_Home.setText("HOME");
+        btn_Home.setText("HOME PAGE");
         btn_Home.setAlignmentY(10.0F);
-        btn_Home.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_Home.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 41, 1, 1, new java.awt.Color(56, 87, 245)));
         btn_Home.setContentAreaFilled(false);
+        btn_Home.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_Home.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_Home.setIconTextGap(28);
+        btn_Home.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_Home.setOpaque(true);
+        btn_Home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_HomeMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_HomeMouseExited(evt);
+            }
+        });
+        btn_Home.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_HomeActionPerformed(evt);
+            }
+        });
 
-        btn_EmployeeManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_EmployeeManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_EmployeeManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_EmployeeManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_EmployeeManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/valet_40px.png"))); // NOI18N
         btn_EmployeeManagement.setText("EMPLOYEE MANAGEMENT");
         btn_EmployeeManagement.setAlignmentY(10.0F);
-        btn_EmployeeManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_EmployeeManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 41, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_EmployeeManagement.setContentAreaFilled(false);
+        btn_EmployeeManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_EmployeeManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_EmployeeManagement.setIconTextGap(28);
+        btn_EmployeeManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_EmployeeManagement.setOpaque(true);
+        btn_EmployeeManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_EmployeeManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_EmployeeManagementMouseExited(evt);
+            }
+        });
+        btn_EmployeeManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_EmployeeManagementActionPerformed(evt);
+            }
+        });
 
-        btn_CustomerManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_CustomerManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_CustomerManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_CustomerManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_CustomerManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/reception_40px.png"))); // NOI18N
         btn_CustomerManagement.setText("CUSTOMER MANAGEMENT");
         btn_CustomerManagement.setAlignmentY(10.0F);
-        btn_CustomerManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_CustomerManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 41, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_CustomerManagement.setContentAreaFilled(false);
+        btn_CustomerManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_CustomerManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_CustomerManagement.setIconTextGap(28);
+        btn_CustomerManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_CustomerManagement.setOpaque(true);
+        btn_CustomerManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_CustomerManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_CustomerManagementMouseExited(evt);
+            }
+        });
+        btn_CustomerManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_CustomerManagementActionPerformed(evt);
+            }
+        });
 
-        btn_AccountManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_AccountManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_AccountManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_AccountManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_AccountManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/time_management_35px.png"))); // NOI18N
         btn_AccountManagement.setText("ACCOUNT MANAGEMENT");
         btn_AccountManagement.setAlignmentY(10.0F);
-        btn_AccountManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_AccountManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 41, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_AccountManagement.setContentAreaFilled(false);
+        btn_AccountManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_AccountManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_AccountManagement.setIconTextGap(33);
+        btn_AccountManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_AccountManagement.setOpaque(true);
+        btn_AccountManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_AccountManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_AccountManagementMouseExited(evt);
+            }
+        });
+        btn_AccountManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AccountManagementActionPerformed(evt);
+            }
+        });
 
-        btn_ShippingManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_ShippingManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_ShippingManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_ShippingManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_ShippingManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/supplier_45px.png"))); // NOI18N
         btn_ShippingManagement.setText("SHIPPING MANAGEMENT");
         btn_ShippingManagement.setAlignmentY(10.0F);
-        btn_ShippingManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_ShippingManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 40, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_ShippingManagement.setContentAreaFilled(false);
+        btn_ShippingManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_ShippingManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_ShippingManagement.setIconTextGap(25);
+        btn_ShippingManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_ShippingManagement.setOpaque(true);
+        btn_ShippingManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_ShippingManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_ShippingManagementMouseExited(evt);
+            }
+        });
+        btn_ShippingManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ShippingManagementActionPerformed(evt);
+            }
+        });
 
-        btn_InventoryManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_InventoryManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_InventoryManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_InventoryManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_InventoryManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/warehouse_35px.png"))); // NOI18N
         btn_InventoryManagement.setText("INVENTORY MANAGEMENT");
         btn_InventoryManagement.setAlignmentY(10.0F);
-        btn_InventoryManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_InventoryManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 43, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_InventoryManagement.setContentAreaFilled(false);
+        btn_InventoryManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_InventoryManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_InventoryManagement.setIconTextGap(31);
+        btn_InventoryManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_InventoryManagement.setOpaque(true);
+        btn_InventoryManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_InventoryManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_InventoryManagementMouseExited(evt);
+            }
+        });
+        btn_InventoryManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_InventoryManagementActionPerformed(evt);
+            }
+        });
 
-        btn_IntergradedManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_IntergradedManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_IntergradedManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_IntergradedManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_IntergradedManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/chart_45px.png"))); // NOI18N
         btn_IntergradedManagement.setText("INTERGRATED MANAGEMENT");
         btn_IntergradedManagement.setAlignmentY(10.0F);
-        btn_IntergradedManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_IntergradedManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 37, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_IntergradedManagement.setContentAreaFilled(false);
+        btn_IntergradedManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_IntergradedManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_IntergradedManagement.setIconTextGap(27);
+        btn_IntergradedManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_IntergradedManagement.setOpaque(true);
+        btn_IntergradedManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_IntergradedManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_IntergradedManagementMouseExited(evt);
+            }
+        });
+        btn_IntergradedManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_IntergradedManagementActionPerformed(evt);
+            }
+        });
 
-        btn_OrderManagement.setBackground(new java.awt.Color(127, 198, 255));
+        btn_OrderManagement.setBackground(new java.awt.Color(2, 16, 86));
         btn_OrderManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_OrderManagement.setForeground(new java.awt.Color(255, 255, 255));
         btn_OrderManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/order_history_35px.png"))); // NOI18N
         btn_OrderManagement.setText("ORDER MANAGEMENT");
         btn_OrderManagement.setAlignmentY(10.0F);
-        btn_OrderManagement.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_OrderManagement.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 40, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_OrderManagement.setContentAreaFilled(false);
+        btn_OrderManagement.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_OrderManagement.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_OrderManagement.setIconTextGap(32);
+        btn_OrderManagement.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_OrderManagement.setOpaque(true);
+        btn_OrderManagement.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_OrderManagementMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_OrderManagementMouseExited(evt);
+            }
+        });
+        btn_OrderManagement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_OrderManagementActionPerformed(evt);
+            }
+        });
 
-        btn_Account.setBackground(new java.awt.Color(127, 198, 255));
+        btn_Account.setBackground(new java.awt.Color(2, 16, 86));
         btn_Account.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_Account.setForeground(new java.awt.Color(255, 255, 255));
         btn_Account.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/account_35px.png"))); // NOI18N
         btn_Account.setText("ACCOUNT");
         btn_Account.setAlignmentY(10.0F);
-        btn_Account.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_Account.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 42, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_Account.setContentAreaFilled(false);
+        btn_Account.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_Account.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_Account.setIconTextGap(30);
+        btn_Account.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_Account.setOpaque(true);
+        btn_Account.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_AccountMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_AccountMouseExited(evt);
+            }
+        });
+        btn_Account.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_AccountActionPerformed(evt);
+            }
+        });
 
-        btn_Setting.setBackground(new java.awt.Color(127, 198, 255));
+        btn_Setting.setBackground(new java.awt.Color(2, 16, 86));
         btn_Setting.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_Setting.setForeground(new java.awt.Color(255, 255, 255));
         btn_Setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/settings_45px.png"))); // NOI18N
         btn_Setting.setText("SETTING");
         btn_Setting.setAlignmentY(10.0F);
-        btn_Setting.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_Setting.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 35, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_Setting.setContentAreaFilled(false);
+        btn_Setting.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_Setting.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_Setting.setIconTextGap(27);
+        btn_Setting.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_Setting.setOpaque(true);
+        btn_Setting.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_SettingMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_SettingMouseExited(evt);
+            }
+        });
+        btn_Setting.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_SettingActionPerformed(evt);
+            }
+        });
 
-        btn_LogOut.setBackground(new java.awt.Color(127, 198, 255));
+        btn_LogOut.setBackground(new java.awt.Color(2, 16, 86));
         btn_LogOut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_LogOut.setForeground(new java.awt.Color(255, 255, 255));
         btn_LogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/Logout_35px.png"))); // NOI18N
         btn_LogOut.setText("LOG OUT");
         btn_LogOut.setAlignmentY(10.0F);
-        btn_LogOut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_LogOut.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 45, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_LogOut.setContentAreaFilled(false);
+        btn_LogOut.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_LogOut.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_LogOut.setIconTextGap(27);
+        btn_LogOut.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_LogOut.setOpaque(true);
+        btn_LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_LogOutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_LogOutMouseExited(evt);
+            }
+        });
+        btn_LogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_LogOutActionPerformed(evt);
+            }
+        });
 
-        btn_Exit.setBackground(new java.awt.Color(127, 198, 255));
+        btn_Exit.setBackground(new java.awt.Color(2, 16, 86));
         btn_Exit.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_Exit.setForeground(new java.awt.Color(255, 255, 255));
         btn_Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/shutdown_35px.png"))); // NOI18N
         btn_Exit.setText("EXIT");
         btn_Exit.setAlignmentY(10.0F);
-        btn_Exit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btn_Exit.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 42, 1, 1, new java.awt.Color(2, 16, 86)));
         btn_Exit.setContentAreaFilled(false);
+        btn_Exit.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btn_Exit.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btn_Exit.setIconTextGap(29);
+        btn_Exit.setMargin(new java.awt.Insets(2, 40, 2, 14));
         btn_Exit.setOpaque(true);
+        btn_Exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_ExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_ExitMouseExited(evt);
+            }
+        });
+        btn_Exit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_MenuLayout = new javax.swing.GroupLayout(pnl_Menu);
         pnl_Menu.setLayout(pnl_MenuLayout);
@@ -677,6 +908,293 @@ public class home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void setColorMenuItem() {
+        // set color button
+        btn_Home.setBackground(new Color(2, 16, 86));
+        btn_EmployeeManagement.setBackground(new Color(2, 16, 86));
+        btn_CustomerManagement.setBackground(new Color(2, 16, 86));
+        btn_AccountManagement.setBackground(new Color(2, 16, 86));
+        btn_ShippingManagement.setBackground(new Color(2, 16, 86));
+        btn_InventoryManagement.setBackground(new Color(2, 16, 86));
+        btn_IntergradedManagement.setBackground(new Color(2, 16, 86));
+        btn_OrderManagement.setBackground(new Color(2, 16, 86));
+        btn_Account.setBackground(new Color(2, 16, 86));
+        btn_Setting.setBackground(new Color(2, 16, 86));
+        btn_LogOut.setBackground(new Color(2, 16, 86));
+        btn_Exit.setBackground(new Color(2, 16, 86));
+        this.btn_CheckClickMenu.setBackground(new Color(56, 87, 245));
+        
+        // set color border
+        btn_Home.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_EmployeeManagement.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_CustomerManagement.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_AccountManagement.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_ShippingManagement.setBorder( BorderFactory.createMatteBorder(1, 40, 1, 1, new Color(2, 16, 86)));
+        btn_InventoryManagement.setBorder( BorderFactory.createMatteBorder(1, 43, 1, 1, new Color(2, 16, 86)));
+        btn_IntergradedManagement.setBorder( BorderFactory.createMatteBorder(1, 37, 1, 1, new Color(2, 16, 86)));
+        btn_OrderManagement.setBorder( BorderFactory.createMatteBorder(1, 40, 1, 1, new Color(2, 16, 86)));
+        btn_Account.setBorder( BorderFactory.createMatteBorder(1, 42, 1, 1, new Color(2, 16, 86)));
+        btn_Setting.setBorder( BorderFactory.createMatteBorder(1, 35, 1, 1, new Color(2, 16, 86)));
+        btn_LogOut.setBorder( BorderFactory.createMatteBorder(1, 45, 1, 1, new Color(2, 16, 86)));
+        btn_Exit.setBorder( BorderFactory.createMatteBorder(1, 42, 1, 1, new Color(2, 16, 86)));
+        this.btn_CheckClickMenu.setBorder( BorderFactory.createMatteBorder(1, sizeBorder, 1, 1, new Color(56, 87, 245)));
+        
+    }
+    
+    private void hoverMenu(JButton btn, int sizeMatteBorder) {
+        setColorMenuItem();
+        // set color button
+        btn.setBackground(new Color(56, 87, 245));
+        
+        // set color border
+        btn.setBorder( BorderFactory.createMatteBorder(1, sizeMatteBorder, 1, 1, new Color(56, 87, 245)));
+    }
+    
+    private void showPanelMenu(JPanel pnl) {
+        // Ẩn tất cả các form còn lại
+        pnl_Home.setVisible(false);
+        pnl_OrderManagement.setVisible(false);
+        
+        
+        // show form lên khi click vào menu
+        pnl.setVisible(true);
+    }
+     
+    private void btn_HomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_Home, 41);
+    }//GEN-LAST:event_btn_HomeMouseEntered
+
+    private void btn_EmployeeManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmployeeManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_EmployeeManagement, 41);
+    }//GEN-LAST:event_btn_EmployeeManagementMouseEntered
+
+    private void btn_CustomerManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CustomerManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_CustomerManagement, 41);
+    }//GEN-LAST:event_btn_CustomerManagementMouseEntered
+
+    private void btn_AccountManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AccountManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_AccountManagement, 41);
+    }//GEN-LAST:event_btn_AccountManagementMouseEntered
+
+    private void btn_ShippingManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ShippingManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_ShippingManagement, 40);
+    }//GEN-LAST:event_btn_ShippingManagementMouseEntered
+
+    private void btn_InventoryManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_InventoryManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_InventoryManagement, 43);
+    }//GEN-LAST:event_btn_InventoryManagementMouseEntered
+
+    private void btn_IntergradedManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_IntergradedManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_IntergradedManagement, 37);
+    }//GEN-LAST:event_btn_IntergradedManagementMouseEntered
+
+    private void btn_OrderManagementMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_OrderManagementMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_OrderManagement, 40);
+    }//GEN-LAST:event_btn_OrderManagementMouseEntered
+
+    private void btn_AccountMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AccountMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_Account, 42);
+    }//GEN-LAST:event_btn_AccountMouseEntered
+
+    private void btn_SettingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_Setting, 35);
+    }//GEN-LAST:event_btn_SettingMouseEntered
+
+    private void btn_LogOutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LogOutMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_LogOut, 45);
+    }//GEN-LAST:event_btn_LogOutMouseEntered
+
+    private void btn_ExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ExitMouseEntered
+        // TODO add your handling code here:
+        hoverMenu(btn_Exit, 42);
+    }//GEN-LAST:event_btn_ExitMouseEntered
+
+    private void btn_HomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_HomeActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_Home;
+        this.sizeBorder = 41;
+        hoverMenu(btn_Home, 41);
+        
+        // code change Tab here
+        showPanelMenu(pnl_Home);
+        
+    }//GEN-LAST:event_btn_HomeActionPerformed
+
+    private void btn_EmployeeManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EmployeeManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_EmployeeManagement;
+        this.sizeBorder = 41;
+        hoverMenu(btn_EmployeeManagement, 41);
+        
+        // code change Tab here
+        
+        
+    }//GEN-LAST:event_btn_EmployeeManagementActionPerformed
+
+    private void btn_CustomerManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CustomerManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_CustomerManagement;
+        this.sizeBorder = 41;
+        hoverMenu(btn_CustomerManagement, 41);
+        
+        // code change Tab here
+        
+    }//GEN-LAST:event_btn_CustomerManagementActionPerformed
+
+    private void btn_AccountManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AccountManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_AccountManagement;
+        this.sizeBorder = 41;
+        hoverMenu(btn_AccountManagement, 41);
+        
+        // code change Tab here
+        
+    }//GEN-LAST:event_btn_AccountManagementActionPerformed
+
+    private void btn_ShippingManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ShippingManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_ShippingManagement;
+        this.sizeBorder = 40;
+        hoverMenu(btn_ShippingManagement, 40);
+        
+        // code change Tab here
+        
+    }//GEN-LAST:event_btn_ShippingManagementActionPerformed
+
+    private void btn_InventoryManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InventoryManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_InventoryManagement;
+        this.sizeBorder = 43;
+        hoverMenu(btn_InventoryManagement, 43);
+        
+        // code change Tab here
+        
+    }//GEN-LAST:event_btn_InventoryManagementActionPerformed
+
+    private void btn_IntergradedManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IntergradedManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_IntergradedManagement;
+        this.sizeBorder = 37;
+        hoverMenu(btn_IntergradedManagement, 37);
+        // code change Tab here
+        
+    }//GEN-LAST:event_btn_IntergradedManagementActionPerformed
+
+    private void btn_OrderManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderManagementActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_OrderManagement;
+        this.sizeBorder = 40;
+        hoverMenu(btn_OrderManagement, 40);
+        
+        // code change Tab here
+        showPanelMenu(pnl_OrderManagement);
+        
+    }//GEN-LAST:event_btn_OrderManagementActionPerformed
+
+    private void btn_AccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AccountActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_Account;
+        this.sizeBorder = 42;
+        hoverMenu(btn_Account, 42);
+        
+        // code change Tab here
+    }//GEN-LAST:event_btn_AccountActionPerformed
+
+    private void btn_SettingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SettingActionPerformed
+        // TODO add your handling code here:
+        this.btn_CheckClickMenu = btn_Setting;
+        this.sizeBorder = 35;
+        hoverMenu(btn_Setting, 35);
+        
+        // code change Tab here
+    }//GEN-LAST:event_btn_SettingActionPerformed
+
+    private void btn_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogOutActionPerformed
+        // TODO add your handling code here:
+        // code change Tab here
+        
+    }//GEN-LAST:event_btn_LogOutActionPerformed
+
+    private void btn_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ExitActionPerformed
+        // TODO add your handling code here:
+        // code change Tab here
+        if(MsgBox.confirm(this, "Are you sure want to exit ?")) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_btn_ExitActionPerformed
+
+    private void btn_HomeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_HomeMouseExited
+
+    private void btn_EmployeeManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_EmployeeManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_EmployeeManagementMouseExited
+
+    private void btn_CustomerManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_CustomerManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_CustomerManagementMouseExited
+
+    private void btn_AccountManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AccountManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_AccountManagementMouseExited
+
+    private void btn_ShippingManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ShippingManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_ShippingManagementMouseExited
+
+    private void btn_InventoryManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_InventoryManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_InventoryManagementMouseExited
+
+    private void btn_IntergradedManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_IntergradedManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_IntergradedManagementMouseExited
+
+    private void btn_OrderManagementMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_OrderManagementMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_OrderManagementMouseExited
+
+    private void btn_AccountMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_AccountMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_AccountMouseExited
+
+    private void btn_SettingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_SettingMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_SettingMouseExited
+
+    private void btn_LogOutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_LogOutMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_LogOutMouseExited
+
+    private void btn_ExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ExitMouseExited
+        // TODO add your handling code here:
+        setColorMenuItem();
+    }//GEN-LAST:event_btn_ExitMouseExited
+
+    
     /**
      * @param args the command line arguments
      */
@@ -739,6 +1257,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
