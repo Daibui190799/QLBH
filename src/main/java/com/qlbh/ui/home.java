@@ -33,7 +33,7 @@ public class home extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
+        pnl_Acc = new javax.swing.JPanel();
         lbl_ImageUser = new javax.swing.JLabel();
         lbl_Role = new javax.swing.JLabel();
         lbl_ID = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class home extends javax.swing.JFrame {
         lbl_Slide2 = new javax.swing.JLabel();
         lbl_Slide3 = new javax.swing.JLabel();
         lbl_Slide4 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        pnl_Menu = new javax.swing.JPanel();
         btn_Home = new javax.swing.JButton();
         btn_EmployeeManagement = new javax.swing.JButton();
         btn_CustomerManagement = new javax.swing.JButton();
@@ -68,6 +68,7 @@ public class home extends javax.swing.JFrame {
         jPanel9 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         pnl_OrderManagement = new javax.swing.JPanel();
@@ -96,54 +97,50 @@ public class home extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
 
-        jPanel3.setBackground(new java.awt.Color(0, 0, 204));
-        jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 1, new java.awt.Color(0, 0, 0)));
-        jPanel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        pnl_Acc.setBackground(new java.awt.Color(254, 218, 166));
+        pnl_Acc.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 1, new java.awt.Color(0, 0, 0)));
+        pnl_Acc.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         lbl_ImageUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/user_120px.png"))); // NOI18N
 
         lbl_Role.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lbl_Role.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Role.setText("EMPLOYEE");
 
         lbl_ID.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbl_ID.setForeground(new java.awt.Color(255, 255, 255));
         lbl_ID.setText("ID: NV001");
 
         lbl_FullName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbl_FullName.setForeground(new java.awt.Color(255, 255, 255));
         lbl_FullName.setText("FULLNAME: NGUYỄN VĂN TÈO");
 
         lbl_Email.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbl_Email.setForeground(new java.awt.Color(255, 255, 255));
         lbl_Email.setText("EMAIL: teonv@gmail.com ");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_AccLayout = new javax.swing.GroupLayout(pnl_Acc);
+        pnl_Acc.setLayout(pnl_AccLayout);
+        pnl_AccLayout.setHorizontalGroup(
+            pnl_AccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_AccLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addComponent(lbl_ImageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(pnl_AccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_AccLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_AccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_FullName, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(pnl_AccLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(lbl_Role, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        pnl_AccLayout.setVerticalGroup(
+            pnl_AccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_AccLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_AccLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_ImageUser, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGroup(pnl_AccLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(lbl_Role)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -201,7 +198,7 @@ public class home extends javax.swing.JFrame {
         btn_NextSlide.setBorderPainted(false);
         btn_NextSlide.setContentAreaFilled(false);
         btn_NextSlide.setFocusPainted(false);
-        pnl_Slide.add(btn_NextSlide, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 70, -1, -1));
+        pnl_Slide.add(btn_NextSlide, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 70, -1, -1));
 
         lbl_Slide1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lbl_Slide1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -228,7 +225,7 @@ public class home extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_Acc, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(pnl_Slide, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -237,16 +234,17 @@ public class home extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_Acc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_Slide, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(255, 204, 153)));
-        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        pnl_Menu.setBackground(new java.awt.Color(255, 255, 255));
+        pnl_Menu.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(255, 204, 153)));
+        pnl_Menu.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btn_Home.setBackground(new java.awt.Color(255, 204, 153));
+        btn_Home.setBackground(new java.awt.Color(0, 29, 110));
         btn_Home.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_Home.setForeground(new java.awt.Color(255, 255, 255));
         btn_Home.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/home_page_40px.png"))); // NOI18N
         btn_Home.setText("HOME");
         btn_Home.setAlignmentY(10.0F);
@@ -254,7 +252,7 @@ public class home extends javax.swing.JFrame {
         btn_Home.setContentAreaFilled(false);
         btn_Home.setOpaque(true);
 
-        btn_EmployeeManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_EmployeeManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_EmployeeManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_EmployeeManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/valet_40px.png"))); // NOI18N
         btn_EmployeeManagement.setText("EMPLOYEE MANAGEMENT");
@@ -263,7 +261,7 @@ public class home extends javax.swing.JFrame {
         btn_EmployeeManagement.setContentAreaFilled(false);
         btn_EmployeeManagement.setOpaque(true);
 
-        btn_CustomerManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_CustomerManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_CustomerManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_CustomerManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/reception_40px.png"))); // NOI18N
         btn_CustomerManagement.setText("CUSTOMER MANAGEMENT");
@@ -272,7 +270,7 @@ public class home extends javax.swing.JFrame {
         btn_CustomerManagement.setContentAreaFilled(false);
         btn_CustomerManagement.setOpaque(true);
 
-        btn_AccountManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_AccountManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_AccountManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_AccountManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/time_management_35px.png"))); // NOI18N
         btn_AccountManagement.setText("ACCOUNT MANAGEMENT");
@@ -281,7 +279,7 @@ public class home extends javax.swing.JFrame {
         btn_AccountManagement.setContentAreaFilled(false);
         btn_AccountManagement.setOpaque(true);
 
-        btn_ShippingManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_ShippingManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_ShippingManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_ShippingManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/supplier_45px.png"))); // NOI18N
         btn_ShippingManagement.setText("SHIPPING MANAGEMENT");
@@ -290,7 +288,7 @@ public class home extends javax.swing.JFrame {
         btn_ShippingManagement.setContentAreaFilled(false);
         btn_ShippingManagement.setOpaque(true);
 
-        btn_InventoryManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_InventoryManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_InventoryManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_InventoryManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/warehouse_35px.png"))); // NOI18N
         btn_InventoryManagement.setText("INVENTORY MANAGEMENT");
@@ -299,7 +297,7 @@ public class home extends javax.swing.JFrame {
         btn_InventoryManagement.setContentAreaFilled(false);
         btn_InventoryManagement.setOpaque(true);
 
-        btn_IntergradedManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_IntergradedManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_IntergradedManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_IntergradedManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/chart_45px.png"))); // NOI18N
         btn_IntergradedManagement.setText("INTERGRATED MANAGEMENT");
@@ -308,7 +306,7 @@ public class home extends javax.swing.JFrame {
         btn_IntergradedManagement.setContentAreaFilled(false);
         btn_IntergradedManagement.setOpaque(true);
 
-        btn_OrderManagement.setBackground(new java.awt.Color(204, 229, 255));
+        btn_OrderManagement.setBackground(new java.awt.Color(127, 198, 255));
         btn_OrderManagement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_OrderManagement.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/order_history_35px.png"))); // NOI18N
         btn_OrderManagement.setText("ORDER MANAGEMENT");
@@ -317,7 +315,7 @@ public class home extends javax.swing.JFrame {
         btn_OrderManagement.setContentAreaFilled(false);
         btn_OrderManagement.setOpaque(true);
 
-        btn_Account.setBackground(new java.awt.Color(204, 229, 255));
+        btn_Account.setBackground(new java.awt.Color(127, 198, 255));
         btn_Account.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_Account.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/account_35px.png"))); // NOI18N
         btn_Account.setText("ACCOUNT");
@@ -326,7 +324,7 @@ public class home extends javax.swing.JFrame {
         btn_Account.setContentAreaFilled(false);
         btn_Account.setOpaque(true);
 
-        btn_Setting.setBackground(new java.awt.Color(204, 229, 255));
+        btn_Setting.setBackground(new java.awt.Color(127, 198, 255));
         btn_Setting.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_Setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/settings_45px.png"))); // NOI18N
         btn_Setting.setText("SETTING");
@@ -335,7 +333,7 @@ public class home extends javax.swing.JFrame {
         btn_Setting.setContentAreaFilled(false);
         btn_Setting.setOpaque(true);
 
-        btn_LogOut.setBackground(new java.awt.Color(204, 229, 255));
+        btn_LogOut.setBackground(new java.awt.Color(127, 198, 255));
         btn_LogOut.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_LogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/Logout_35px.png"))); // NOI18N
         btn_LogOut.setText("LOG OUT");
@@ -344,7 +342,7 @@ public class home extends javax.swing.JFrame {
         btn_LogOut.setContentAreaFilled(false);
         btn_LogOut.setOpaque(true);
 
-        btn_Exit.setBackground(new java.awt.Color(204, 229, 255));
+        btn_Exit.setBackground(new java.awt.Color(127, 198, 255));
         btn_Exit.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btn_Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/shutdown_35px.png"))); // NOI18N
         btn_Exit.setText("EXIT");
@@ -353,10 +351,10 @@ public class home extends javax.swing.JFrame {
         btn_Exit.setContentAreaFilled(false);
         btn_Exit.setOpaque(true);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_MenuLayout = new javax.swing.GroupLayout(pnl_Menu);
+        pnl_Menu.setLayout(pnl_MenuLayout);
+        pnl_MenuLayout.setHorizontalGroup(
+            pnl_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btn_Home, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btn_EmployeeManagement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btn_CustomerManagement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -370,9 +368,9 @@ public class home extends javax.swing.JFrame {
             .addComponent(btn_LogOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(btn_Exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        pnl_MenuLayout.setVerticalGroup(
+            pnl_MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_MenuLayout.createSequentialGroup()
                 .addComponent(btn_Home, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(btn_EmployeeManagement, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -407,12 +405,12 @@ public class home extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
         jPanel9.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(0, 0, 0)));
 
+        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"TIME WORK (8-16h)", null, null, null, null, null, null, null},
                 {"SHIPPING", null, null, null, null, null, null, null},
-                {"WAREHOUSE", null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {"WAREHOUSE", null, null, null, null, null, null, null}
             },
             new String [] {
                 "", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"
@@ -420,18 +418,31 @@ public class home extends javax.swing.JFrame {
         ));
         jTable1.setGridColor(new java.awt.Color(255, 255, 255));
         jTable1.setName(""); // NOI18N
+        jTable1.setRowHeight(121);
         jTable1.setSelectionBackground(new java.awt.Color(51, 153, 255));
         jScrollPane1.setViewportView(jTable1);
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel2.setText("CALENDAR");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1269, Short.MAX_VALUE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(570, 570, 570)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
@@ -474,7 +485,7 @@ public class home extends javax.swing.JFrame {
             .addGroup(pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnl_HomeLayout.createSequentialGroup()
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(221, Short.MAX_VALUE)))
+                    .addContainerGap(215, Short.MAX_VALUE)))
         );
 
         pnl_Main.add(pnl_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
@@ -633,7 +644,7 @@ public class home extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(pnl_Main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -644,7 +655,7 @@ public class home extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_Main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(pnl_Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -652,8 +663,9 @@ public class home extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -724,6 +736,7 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
@@ -732,8 +745,6 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
@@ -751,8 +762,10 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_Slide2;
     private javax.swing.JLabel lbl_Slide3;
     private javax.swing.JLabel lbl_Slide4;
+    private javax.swing.JPanel pnl_Acc;
     private javax.swing.JPanel pnl_Home;
     private javax.swing.JPanel pnl_Main;
+    private javax.swing.JPanel pnl_Menu;
     private javax.swing.JPanel pnl_OrderManagement;
     private javax.swing.JPanel pnl_Slide;
     // End of variables declaration//GEN-END:variables
