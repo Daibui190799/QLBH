@@ -996,10 +996,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <EmptySpace min="0" pref="449" max="32767" attributes="0"/>
 =======
                           <EmptySpace min="0" pref="443" max="32767" attributes="0"/>
 >>>>>>> Khanh
+=======
+                          <EmptySpace min="0" pref="448" max="32767" attributes="0"/>
+>>>>>>> parent of d96d543 (Hân)
 =======
                           <EmptySpace min="0" pref="448" max="32767" attributes="0"/>
 >>>>>>> parent of d96d543 (Hân)
@@ -1201,11 +1205,14 @@
             </Container>
             <Container class="javax.swing.JPanel" name="pnl_OrderManagement">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+=======
+>>>>>>> parent of d96d543 (Hân)
 =======
 >>>>>>> parent of d96d543 (Hân)
               <Constraints>
