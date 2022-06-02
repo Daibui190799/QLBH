@@ -1101,6 +1101,10 @@ public class home extends javax.swing.JFrame {
         // show form lên khi click vào menu
         pnl.setVisible(true);
     }
+    
+    private void showChart() {
+        
+    }
      
     private void btn_HomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseEntered
         // TODO add your handling code here:
