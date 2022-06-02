@@ -16,6 +16,7 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>11.1.1.jre8-preview</version>
         </dependency>
+<<<<<<< HEAD
 
         <!-- https://mvnrepository.com/artifact/jfree/jcommon -->
         <dependency>
@@ -35,6 +36,8 @@
             <version>1.4</version>
         </dependency>
 
+=======
+>>>>>>> parent of d96d543 (Hân)
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

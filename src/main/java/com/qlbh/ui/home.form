@@ -995,10 +995,14 @@
                       <Group type="102" alignment="1" attributes="0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <EmptySpace min="0" pref="449" max="32767" attributes="0"/>
 =======
                           <EmptySpace min="0" pref="443" max="32767" attributes="0"/>
 >>>>>>> Khanh
+=======
+                          <EmptySpace min="0" pref="448" max="32767" attributes="0"/>
+>>>>>>> parent of d96d543 (Hân)
 =======
                           <EmptySpace min="0" pref="448" max="32767" attributes="0"/>
 >>>>>>> parent of d96d543 (Hân)
@@ -1196,11 +1200,14 @@
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="pnl_OrderManagement">
+<<<<<<< HEAD
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+=======
+>>>>>>> parent of d96d543 (Hân)
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="0" width="1270" height="670"/>

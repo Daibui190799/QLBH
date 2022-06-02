@@ -725,10 +725,14 @@ public class home extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HomeLayout.createSequentialGroup()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addGap(0, 449, Short.MAX_VALUE)
 =======
                 .addGap(0, 443, Short.MAX_VALUE)
 >>>>>>> Khanh
+=======
+                .addGap(0, 448, Short.MAX_VALUE)
+>>>>>>> parent of d96d543 (Hân)
 =======
                 .addGap(0, 448, Short.MAX_VALUE)
 >>>>>>> parent of d96d543 (Hân)
@@ -741,6 +745,7 @@ public class home extends javax.swing.JFrame {
 
         pnl_Main.add(pnl_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         pnl_IntergratedManagement.setBackground(new java.awt.Color(255, 255, 255));
@@ -806,6 +811,8 @@ public class home extends javax.swing.JFrame {
         pnl_OrderManagement.setBackground(new java.awt.Color(255, 255, 255));
 >>>>>>> Khanh
 
+=======
+>>>>>>> parent of d96d543 (Hân)
 =======
 >>>>>>> parent of d96d543 (Hân)
         jTabbedPane3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -1409,6 +1416,7 @@ public class home extends javax.swing.JFrame {
         setColorMenuItem();
     }//GEN-LAST:event_btn_ExitMouseExited
 
+<<<<<<< HEAD
     private void cbo_IntergratedMana_chartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_IntergratedMana_chartActionPerformed
         // TODO add your handling code here:
         showChart();
@@ -1432,6 +1440,9 @@ public class home extends javax.swing.JFrame {
 
     
 >>>>>>> Khanh
+=======
+    
+>>>>>>> parent of d96d543 (Hân)
 =======
     
 >>>>>>> parent of d96d543 (Hân)
@@ -1500,8 +1511,11 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton btn_ShippingManagement;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JComboBox<String> cbo_IntergratedMana_chart;
     private javax.swing.JComboBox<String> cbo_IntergratedMana_year;
+=======
+>>>>>>> parent of d96d543 (Hân)
 =======
 >>>>>>> parent of d96d543 (Hân)
     private javax.swing.JButton jButton13;
@@ -1517,7 +1531,10 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel3;
+=======
+>>>>>>> parent of d96d543 (Hân)
 =======
 >>>>>>> parent of d96d543 (Hân)
     private javax.swing.JLabel jLabel6;
