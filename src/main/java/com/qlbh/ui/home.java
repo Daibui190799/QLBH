@@ -4,9 +4,12 @@
  */
 package com.qlbh.ui;
 
+import com.qlbh.utils.Chart;
 import com.qlbh.utils.MsgBox;
 import com.qlbh.utils.XImage;
 import java.awt.Color;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -22,11 +25,12 @@ public class home extends javax.swing.JFrame {
      */
     private JButton btn_CheckClickMenu = new JButton();
     private int sizeBorder = 41;
+
     public home() {
         initComponents();
         btn_CheckClickMenu = btn_Home;
         showPanelMenu(pnl_Home);
-        
+
         setLocationRelativeTo(null);
         this.setIconImage(XImage.getAppIcon());
     }
@@ -81,6 +85,11 @@ public class home extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        pnl_IntergratedManagement = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        cbo_IntergratedMana_chart = new javax.swing.JComboBox<>();
+        cbo_IntergratedMana_year = new javax.swing.JComboBox<>();
+        pnl_Intergrated_chart = new javax.swing.JPanel();
         pnl_OrderManagement = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jPanel11 = new javax.swing.JPanel();
@@ -631,10 +640,10 @@ public class home extends javax.swing.JFrame {
         pnl_Main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pnl_Home.setBackground(new java.awt.Color(255, 255, 255));
-        pnl_Home.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        pnl_Home.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel9.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 1, new java.awt.Color(0, 0, 0)));
+        jPanel9.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -660,7 +669,7 @@ public class home extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1269, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1270, Short.MAX_VALUE)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(570, 570, 570)
                 .addComponent(jLabel2)
@@ -677,7 +686,7 @@ public class home extends javax.swing.JFrame {
         );
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel10.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 1, new java.awt.Color(0, 0, 0)));
+        jPanel10.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 0, new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/home/notification_60px.png"))); // NOI18N
@@ -711,15 +720,75 @@ public class home extends javax.swing.JFrame {
         pnl_HomeLayout.setVerticalGroup(
             pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HomeLayout.createSequentialGroup()
-                .addGap(0, 448, Short.MAX_VALUE)
+                .addGap(0, 449, Short.MAX_VALUE)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnl_HomeLayout.createSequentialGroup()
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(215, Short.MAX_VALUE)))
+                    .addContainerGap(216, Short.MAX_VALUE)))
         );
 
         pnl_Main.add(pnl_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
+
+        pnl_IntergratedManagement.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setText("INTERGRATED MANAGEMENT");
+
+        cbo_IntergratedMana_chart.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        cbo_IntergratedMana_chart.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHART", "LINECHART", "BARCHART", "PIECHART" }));
+        cbo_IntergratedMana_chart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbo_IntergratedMana_chartActionPerformed(evt);
+            }
+        });
+
+        cbo_IntergratedMana_year.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        cbo_IntergratedMana_year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "YEAR", "2022", "2021", "2020", "2019", "2018", "2017" }));
+        cbo_IntergratedMana_year.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbo_IntergratedMana_yearActionPerformed(evt);
+            }
+        });
+
+        pnl_Intergrated_chart.setBackground(new java.awt.Color(255, 255, 255));
+        pnl_Intergrated_chart.setLayout(new java.awt.BorderLayout());
+
+        javax.swing.GroupLayout pnl_IntergratedManagementLayout = new javax.swing.GroupLayout(pnl_IntergratedManagement);
+        pnl_IntergratedManagement.setLayout(pnl_IntergratedManagementLayout);
+        pnl_IntergratedManagementLayout.setHorizontalGroup(
+            pnl_IntergratedManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_IntergratedManagementLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(pnl_Intergrated_chart, javax.swing.GroupLayout.PREFERRED_SIZE, 1236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_IntergratedManagementLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnl_IntergratedManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(pnl_IntergratedManagementLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(cbo_IntergratedMana_chart, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cbo_IntergratedMana_year, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(445, 445, 445))
+        );
+        pnl_IntergratedManagementLayout.setVerticalGroup(
+            pnl_IntergratedManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_IntergratedManagementLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnl_IntergratedManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbo_IntergratedMana_chart, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbo_IntergratedMana_year, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(pnl_Intergrated_chart, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        pnl_Main.add(pnl_IntergratedManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
 
         jTabbedPane3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
 
@@ -923,43 +992,78 @@ public class home extends javax.swing.JFrame {
         btn_LogOut.setBackground(new Color(2, 16, 86));
         btn_Exit.setBackground(new Color(2, 16, 86));
         this.btn_CheckClickMenu.setBackground(new Color(56, 87, 245));
-        
+
         // set color border
-        btn_Home.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
-        btn_EmployeeManagement.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
-        btn_CustomerManagement.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
-        btn_AccountManagement.setBorder( BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
-        btn_ShippingManagement.setBorder( BorderFactory.createMatteBorder(1, 40, 1, 1, new Color(2, 16, 86)));
-        btn_InventoryManagement.setBorder( BorderFactory.createMatteBorder(1, 43, 1, 1, new Color(2, 16, 86)));
-        btn_IntergradedManagement.setBorder( BorderFactory.createMatteBorder(1, 37, 1, 1, new Color(2, 16, 86)));
-        btn_OrderManagement.setBorder( BorderFactory.createMatteBorder(1, 40, 1, 1, new Color(2, 16, 86)));
-        btn_Account.setBorder( BorderFactory.createMatteBorder(1, 42, 1, 1, new Color(2, 16, 86)));
-        btn_Setting.setBorder( BorderFactory.createMatteBorder(1, 35, 1, 1, new Color(2, 16, 86)));
-        btn_LogOut.setBorder( BorderFactory.createMatteBorder(1, 45, 1, 1, new Color(2, 16, 86)));
-        btn_Exit.setBorder( BorderFactory.createMatteBorder(1, 42, 1, 1, new Color(2, 16, 86)));
-        this.btn_CheckClickMenu.setBorder( BorderFactory.createMatteBorder(1, sizeBorder, 1, 1, new Color(56, 87, 245)));
-        
+        btn_Home.setBorder(BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_EmployeeManagement.setBorder(BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_CustomerManagement.setBorder(BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_AccountManagement.setBorder(BorderFactory.createMatteBorder(1, 41, 1, 1, new Color(2, 16, 86)));
+        btn_ShippingManagement.setBorder(BorderFactory.createMatteBorder(1, 40, 1, 1, new Color(2, 16, 86)));
+        btn_InventoryManagement.setBorder(BorderFactory.createMatteBorder(1, 43, 1, 1, new Color(2, 16, 86)));
+        btn_IntergradedManagement.setBorder(BorderFactory.createMatteBorder(1, 37, 1, 1, new Color(2, 16, 86)));
+        btn_OrderManagement.setBorder(BorderFactory.createMatteBorder(1, 40, 1, 1, new Color(2, 16, 86)));
+        btn_Account.setBorder(BorderFactory.createMatteBorder(1, 42, 1, 1, new Color(2, 16, 86)));
+        btn_Setting.setBorder(BorderFactory.createMatteBorder(1, 35, 1, 1, new Color(2, 16, 86)));
+        btn_LogOut.setBorder(BorderFactory.createMatteBorder(1, 45, 1, 1, new Color(2, 16, 86)));
+        btn_Exit.setBorder(BorderFactory.createMatteBorder(1, 42, 1, 1, new Color(2, 16, 86)));
+        this.btn_CheckClickMenu.setBorder(BorderFactory.createMatteBorder(1, sizeBorder, 1, 1, new Color(56, 87, 245)));
+
     }
-    
+
     private void hoverMenu(JButton btn, int sizeMatteBorder) {
         setColorMenuItem();
         // set color button
         btn.setBackground(new Color(56, 87, 245));
-        
+
         // set color border
-        btn.setBorder( BorderFactory.createMatteBorder(1, sizeMatteBorder, 1, 1, new Color(56, 87, 245)));
+        btn.setBorder(BorderFactory.createMatteBorder(1, sizeMatteBorder, 1, 1, new Color(56, 87, 245)));
     }
-    
+
     private void showPanelMenu(JPanel pnl) {
         // Ẩn tất cả các form còn lại
         pnl_Home.setVisible(false);
         pnl_OrderManagement.setVisible(false);
-        
-        
+        pnl_IntergratedManagement.setVisible(false);
+
         // show form lên khi click vào menu
         pnl.setVisible(true);
     }
-     
+
+    private void showChart() {
+        if (cbo_IntergratedMana_chart.getSelectedIndex() != 0 && cbo_IntergratedMana_year.getSelectedIndex() != 0) {
+            pnl_Intergrated_chart.removeAll();
+            if (cbo_IntergratedMana_chart.getSelectedItem().equals("PIECHART")) {
+                String[] element = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
+                double[] percent = {5, 10, 4, 7, 2, 20, 7, 2, 13, 6, 10, 14};
+                try {
+                    pnl_Intergrated_chart.add(Chart.PieChart("REVENUE CHART", element, percent));
+                } catch (Exception ex) {
+                    Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else if (cbo_IntergratedMana_chart.getSelectedItem().equals("LINECHART")) {
+                String[] element = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
+                double[] value = {5, 20, 10, 30, 40, 70, 30, 50, 100, 70, 150, 200};
+                try {
+                    pnl_Intergrated_chart.add(Chart.LineChart("REVENUE CHART", "YEAR " + cbo_IntergratedMana_year.getSelectedItem(), "REVENUE", element, value));
+                } catch (Exception ex) {
+                    Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } else {
+                String[] element = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
+                double[] value = {5, 20, 10, 30, 40, 70, 30, 50, 100, 70, 150, 200};
+                try {
+                    pnl_Intergrated_chart.add(Chart.BarChart("REVENUE CHART", "YEAR " + cbo_IntergratedMana_year.getSelectedItem(), "REVENUE", element, value));
+                } catch (Exception ex) {
+                    Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            pnl_Intergrated_chart.validate();
+        } else {
+            pnl_Intergrated_chart.removeAll();
+            showPanelMenu(pnl_IntergratedManagement);
+        }
+    }
+
     private void btn_HomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseEntered
         // TODO add your handling code here:
         hoverMenu(btn_Home, 41);
@@ -1025,10 +1129,10 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_Home;
         this.sizeBorder = 41;
         hoverMenu(btn_Home, 41);
-        
+
         // code change Tab here
         showPanelMenu(pnl_Home);
-        
+
     }//GEN-LAST:event_btn_HomeActionPerformed
 
     private void btn_EmployeeManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EmployeeManagementActionPerformed
@@ -1036,10 +1140,9 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_EmployeeManagement;
         this.sizeBorder = 41;
         hoverMenu(btn_EmployeeManagement, 41);
-        
+
         // code change Tab here
-        
-        
+
     }//GEN-LAST:event_btn_EmployeeManagementActionPerformed
 
     private void btn_CustomerManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CustomerManagementActionPerformed
@@ -1047,9 +1150,9 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_CustomerManagement;
         this.sizeBorder = 41;
         hoverMenu(btn_CustomerManagement, 41);
-        
+
         // code change Tab here
-        
+
     }//GEN-LAST:event_btn_CustomerManagementActionPerformed
 
     private void btn_AccountManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AccountManagementActionPerformed
@@ -1057,9 +1160,9 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_AccountManagement;
         this.sizeBorder = 41;
         hoverMenu(btn_AccountManagement, 41);
-        
+
         // code change Tab here
-        
+
     }//GEN-LAST:event_btn_AccountManagementActionPerformed
 
     private void btn_ShippingManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ShippingManagementActionPerformed
@@ -1067,9 +1170,9 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_ShippingManagement;
         this.sizeBorder = 40;
         hoverMenu(btn_ShippingManagement, 40);
-        
+
         // code change Tab here
-        
+
     }//GEN-LAST:event_btn_ShippingManagementActionPerformed
 
     private void btn_InventoryManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_InventoryManagementActionPerformed
@@ -1077,9 +1180,9 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_InventoryManagement;
         this.sizeBorder = 43;
         hoverMenu(btn_InventoryManagement, 43);
-        
+
         // code change Tab here
-        
+
     }//GEN-LAST:event_btn_InventoryManagementActionPerformed
 
     private void btn_IntergradedManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_IntergradedManagementActionPerformed
@@ -1087,8 +1190,9 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_IntergradedManagement;
         this.sizeBorder = 37;
         hoverMenu(btn_IntergradedManagement, 37);
+
         // code change Tab here
-        
+        showPanelMenu(pnl_IntergratedManagement);
     }//GEN-LAST:event_btn_IntergradedManagementActionPerformed
 
     private void btn_OrderManagementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderManagementActionPerformed
@@ -1096,10 +1200,10 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_OrderManagement;
         this.sizeBorder = 40;
         hoverMenu(btn_OrderManagement, 40);
-        
+
         // code change Tab here
         showPanelMenu(pnl_OrderManagement);
-        
+
     }//GEN-LAST:event_btn_OrderManagementActionPerformed
 
     private void btn_AccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AccountActionPerformed
@@ -1107,7 +1211,7 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_Account;
         this.sizeBorder = 42;
         hoverMenu(btn_Account, 42);
-        
+
         // code change Tab here
     }//GEN-LAST:event_btn_AccountActionPerformed
 
@@ -1116,20 +1220,20 @@ public class home extends javax.swing.JFrame {
         this.btn_CheckClickMenu = btn_Setting;
         this.sizeBorder = 35;
         hoverMenu(btn_Setting, 35);
-        
+
         // code change Tab here
     }//GEN-LAST:event_btn_SettingActionPerformed
 
     private void btn_LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LogOutActionPerformed
         // TODO add your handling code here:
         // code change Tab here
-        
+
     }//GEN-LAST:event_btn_LogOutActionPerformed
 
     private void btn_ExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ExitActionPerformed
         // TODO add your handling code here:
         // code change Tab here
-        if(MsgBox.confirm(this, "Are you sure want to exit ?")) {
+        if (MsgBox.confirm(this, "Are you sure want to exit ?")) {
             System.exit(0);
         }
     }//GEN-LAST:event_btn_ExitActionPerformed
@@ -1194,7 +1298,16 @@ public class home extends javax.swing.JFrame {
         setColorMenuItem();
     }//GEN-LAST:event_btn_ExitMouseExited
 
-    
+    private void cbo_IntergratedMana_chartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_IntergratedMana_chartActionPerformed
+        // TODO add your handling code here:
+        showChart();
+    }//GEN-LAST:event_cbo_IntergratedMana_chartActionPerformed
+
+    private void cbo_IntergratedMana_yearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_IntergratedMana_yearActionPerformed
+        // TODO add your handling code here:
+        showChart();
+    }//GEN-LAST:event_cbo_IntergratedMana_yearActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1249,12 +1362,15 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton btn_PrevSlide;
     private javax.swing.JButton btn_Setting;
     private javax.swing.JButton btn_ShippingManagement;
+    private javax.swing.JComboBox<String> cbo_IntergratedMana_chart;
+    private javax.swing.JComboBox<String> cbo_IntergratedMana_year;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
@@ -1283,6 +1399,8 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_Slide4;
     private javax.swing.JPanel pnl_Acc;
     private javax.swing.JPanel pnl_Home;
+    private javax.swing.JPanel pnl_IntergratedManagement;
+    private javax.swing.JPanel pnl_Intergrated_chart;
     private javax.swing.JPanel pnl_Main;
     private javax.swing.JPanel pnl_Menu;
     private javax.swing.JPanel pnl_OrderManagement;
