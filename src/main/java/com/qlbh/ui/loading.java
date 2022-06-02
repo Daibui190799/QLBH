@@ -5,14 +5,6 @@
  */
 package com.qlbh.ui;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.RenderingHints;
-import javax.swing.JComponent;
-import javax.swing.plaf.basic.BasicProgressBarUI;
-
 /**
  *
  * @author pc
@@ -22,68 +14,8 @@ public class loading extends javax.swing.JFrame {
     /**
      * Creates new form loading
      */
-    public loading(java.awt.Frame parent, boolean modal) {
+    public loading() {
         initComponents();
-        init();
-        prgLoading();
-    }
-
-
-    private void prgLoading(){
-        prgLoading.setUI(new MyProgressUI());
-        prgLoading.setBackground(new Color(235, 235, 235));
-        prgLoading.setForeground(new Color(100, 100, 100));
-        prgLoading.setStringPainted(true);
-    }
-    private static class MyProgressUI extends BasicProgressBarUI {
-
-        private Rectangle r = new Rectangle();
-
-        @Override
-        protected void paintIndeterminate(Graphics g, JComponent c) {
-            Graphics2D g2d = (Graphics2D) g;
-            g2d.setRenderingHint(
-                    RenderingHints.KEY_ANTIALIASING,
-                    RenderingHints.VALUE_ANTIALIAS_ON);
-            r = getBox(r);
-            g.setColor(progressBar.getForeground());
-            g.fillOval(r.x, r.y, r.width, r.height);
-        }
-    }
-
-    public void init() {
-        setLocationRelativeTo(null);
-        //thread là 1 khỗi mã thực hiện nhiệm vụ
-        Thread t = new Thread() {
-            int i = -1;
-
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        i++;
-                        prgLoading.setValue(i);
-                        if (i == 20) {
-                            lblStatus.setText("   Setting up modun...");
-                        }
-                        if (i == 50) {
-                            lblStatus.setText("   Connecting with Database...");
-                        }
-                        if (i == 90) {
-                            lblStatus.setText("   Starting connect to Program...");
-                        }
-                        if (i == 100) {
-                            loading.this.dispose();   //đóng ChaoJDialog
-                            break;
-                        }
-                        Thread.sleep(100);   //thread tạm dừng hoạt động trong 20 ms
-                    } catch (InterruptedException ex) {
-                        break;
-                    }
-                }
-            }
-        };
-        t.start();       //thread bắt đầu hoạt động
     }
 
     /**
@@ -95,72 +27,109 @@ public class loading extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        prgLoading = new javax.swing.JProgressBar();
-        lblStatus = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jPanel1 = new javax.swing.JPanel();
+        pgb_loading = new javax.swing.JProgressBar();
+        lbl_anh_loading = new javax.swing.JLabel();
+        Btn_dot4 = new javax.swing.JButton();
+        Btn_dot1 = new javax.swing.JButton();
+        Btn_dot2 = new javax.swing.JButton();
+        Btn_dot3 = new javax.swing.JButton();
+
+        jPasswordField1.setText("jPasswordField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("BANNER");
-        setUndecorated(true);
 
-        prgLoading.setBackground(new java.awt.Color(0, 0, 255));
-        prgLoading.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        prgLoading.setForeground(new java.awt.Color(51, 51, 51));
-        prgLoading.setToolTipText("");
-        prgLoading.setStringPainted(true);
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblStatus.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        lblStatus.setText("   Khởi động ứng dụng...");
+        pgb_loading.setValue(50);
+        pgb_loading.setStringPainted(true);
+        jPanel1.add(pgb_loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 662, 1240, 44));
 
-        jPanel3.setPreferredSize(new java.awt.Dimension(720, 280));
+        lbl_anh_loading.setBackground(new java.awt.Color(255, 51, 51));
+        lbl_anh_loading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbl_anh_loading.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/loading/z3442359022391_8b836899d0f5dd54ed0085868cb601ea.jpg"))); // NOI18N
+        lbl_anh_loading.setText("HÌNH");
+        jPanel1.add(lbl_anh_loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 1230, 550));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/loading/SL_030420_28660_03.jpg"))); // NOI18N
+        Btn_dot4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Btn_dot4.setBorder(null);
+        Btn_dot4.setBorderPainted(false);
+        Btn_dot4.setContentAreaFilled(false);
+        Btn_dot4.setFocusPainted(false);
+        Btn_dot4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_dot4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Btn_dot4, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 610, 20, 20));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 762, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 3, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
-        );
+        Btn_dot1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Btn_dot1.setBorder(null);
+        Btn_dot1.setBorderPainted(false);
+        Btn_dot1.setContentAreaFilled(false);
+        Btn_dot1.setFocusPainted(false);
+        Btn_dot1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_dot1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Btn_dot1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 610, 20, 20));
+
+        Btn_dot2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Btn_dot2.setBorder(null);
+        Btn_dot2.setBorderPainted(false);
+        Btn_dot2.setContentAreaFilled(false);
+        Btn_dot2.setFocusPainted(false);
+        Btn_dot2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_dot2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Btn_dot2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 610, 20, 20));
+
+        Btn_dot3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        Btn_dot3.setBorder(null);
+        Btn_dot3.setBorderPainted(false);
+        Btn_dot3.setContentAreaFilled(false);
+        Btn_dot3.setFocusPainted(false);
+        Btn_dot3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_dot3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Btn_dot3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 610, 20, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(prgLoading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 546, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1318, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblStatus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(prgLoading, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Btn_dot4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_dot4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_dot4ActionPerformed
+
+    private void Btn_dot1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_dot1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_dot1ActionPerformed
+
+    private void Btn_dot2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_dot2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_dot2ActionPerformed
+
+    private void Btn_dot3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_dot3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_dot3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,28 +158,23 @@ public class loading extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                loading dialog = new loading(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new loading().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lblStatus;
-    private javax.swing.JProgressBar prgLoading;
+    private javax.swing.JButton Btn_dot1;
+    private javax.swing.JButton Btn_dot2;
+    private javax.swing.JButton Btn_dot3;
+    private javax.swing.JButton Btn_dot4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel lbl_anh_loading;
+    private javax.swing.JProgressBar pgb_loading;
     // End of variables declaration//GEN-END:variables
 }

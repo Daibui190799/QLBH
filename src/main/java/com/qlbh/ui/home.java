@@ -92,31 +92,19 @@ public class home extends javax.swing.JFrame {
         pnl_Intergrated_chart = new javax.swing.JPanel();
         pnl_OrderManagement = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
-        Order_Management = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
-        lbl_OrderMana_search = new javax.swing.JLabel();
-        txt_OrderMana_search = new javax.swing.JTextField();
-        cbo_OrderMana_OrderBy = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel12 = new javax.swing.JPanel();
-        btn_OrderMana_add = new javax.swing.JButton();
-        btn_OrderMana_delete = new javax.swing.JButton();
-        btn_OrderMana_edit = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tbl_OrderMana = new javax.swing.JTable();
-        Order_Details = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        lbl_OrderDetail_search = new javax.swing.JLabel();
-        txt_OrderDetail_search = new javax.swing.JTextField();
-        cbo_OrderDetail_search = new javax.swing.JComboBox<>();
+        jTable2 = new javax.swing.JTable();
         jPanel13 = new javax.swing.JPanel();
-        btn_OrderDetail_add = new javax.swing.JButton();
-        btn_OrderDetail_delete = new javax.swing.JButton();
-        btn_OrderDetail_edit = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        tbl_OrderDetail = new javax.swing.JTable();
-        btn_OrderDetail_export = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
@@ -732,11 +720,7 @@ public class home extends javax.swing.JFrame {
         pnl_HomeLayout.setVerticalGroup(
             pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HomeLayout.createSequentialGroup()
-<<<<<<< HEAD
                 .addGap(0, 449, Short.MAX_VALUE)
-=======
-                .addGap(0, 443, Short.MAX_VALUE)
->>>>>>> Khanh
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnl_HomeLayout.createSequentialGroup()
@@ -746,7 +730,6 @@ public class home extends javax.swing.JFrame {
 
         pnl_Main.add(pnl_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
 
-<<<<<<< HEAD
         pnl_IntergratedManagement.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -806,41 +789,29 @@ public class home extends javax.swing.JFrame {
         );
 
         pnl_Main.add(pnl_IntergratedManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
-=======
-        pnl_OrderManagement.setBackground(new java.awt.Color(255, 255, 255));
->>>>>>> Khanh
 
         jTabbedPane3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
 
-        Order_Management.setBackground(new java.awt.Color(255, 255, 255));
-
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lbl_OrderMana_search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/Order/search_35px.png"))); // NOI18N
-        jPanel8.add(lbl_OrderMana_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 40, 40));
-        jPanel8.add(txt_OrderMana_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 40));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/Order/search_35px.png"))); // NOI18N
+        jPanel8.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 40, 40));
+        jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 40));
 
-        cbo_OrderMana_OrderBy.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cbo_OrderMana_OrderBy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Order By", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Order By", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jButton13.setText("ADD");
 
-        btn_OrderMana_add.setText("ADD");
-        btn_OrderMana_add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_OrderMana_addActionPerformed(evt);
-            }
-        });
+        jButton14.setText("DELETE");
 
-        btn_OrderMana_delete.setText("DELETE");
-
-        btn_OrderMana_edit.setText("EDIT");
+        jButton15.setText("EDIT");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel7.setText("Order Management");
 
-        tbl_OrderMana.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        tbl_OrderMana.setModel(new javax.swing.table.DefaultTableModel(
+        jTable2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"ID001", "D123", "Mr.Duong", "SL3XL", "Lace underwear", "18/05/2022", "6", "50.000", "Pink color"},
                 {null, null, null, null, null, null, null, null, null},
@@ -871,8 +842,8 @@ public class home extends javax.swing.JFrame {
                 "Order ID", "Custtomer ID", "Customer Name", "Product ID", "Product Name", "Date", "Quantity", "Price", "Note"
             }
         ));
-        tbl_OrderMana.setRowHeight(30);
-        jScrollPane2.setViewportView(tbl_OrderMana);
+        jTable2.setRowHeight(30);
+        jScrollPane2.setViewportView(jTable2);
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -880,16 +851,16 @@ public class home extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_OrderMana_add, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_OrderMana_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btn_OrderMana_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
+                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74))
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(493, 493, 493)
                 .addComponent(jLabel7)
-                .addContainerGap(543, Short.MAX_VALUE))
+                .addContainerGap(523, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2)
@@ -902,176 +873,55 @@ public class home extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_OrderMana_add, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_OrderMana_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_OrderMana_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31))
         );
 
-        javax.swing.GroupLayout Order_ManagementLayout = new javax.swing.GroupLayout(Order_Management);
-        Order_Management.setLayout(Order_ManagementLayout);
-        Order_ManagementLayout.setHorizontalGroup(
-            Order_ManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Order_ManagementLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Order_ManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(Order_ManagementLayout.createSequentialGroup()
+                    .addGroup(jPanel11Layout.createSequentialGroup()
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45)
-                        .addComponent(cbo_OrderMana_OrderBy, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        Order_ManagementLayout.setVerticalGroup(
-            Order_ManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Order_ManagementLayout.createSequentialGroup()
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(Order_ManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cbo_OrderMana_OrderBy))
+                    .addComponent(jComboBox1))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jTabbedPane3.addTab("Order Management", Order_Management);
-
-        Order_Details.setBackground(new java.awt.Color(255, 255, 255));
-
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lbl_OrderDetail_search.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/qlbh/icon/Order/search_35px.png"))); // NOI18N
-        jPanel11.add(lbl_OrderDetail_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 40, 40));
-        jPanel11.add(txt_OrderDetail_search, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 40));
-
-        cbo_OrderDetail_search.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        cbo_OrderDetail_search.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Order By", "Item 2", "Item 3", "Item 4" }));
-
-        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
-
-        btn_OrderDetail_add.setText("ADD");
-        btn_OrderDetail_add.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_OrderDetail_addActionPerformed(evt);
-            }
-        });
-
-        btn_OrderDetail_delete.setText("DELETE");
-
-        btn_OrderDetail_edit.setText("EDIT");
-
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel11.setText("Order Details");
-
-        tbl_OrderDetail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        tbl_OrderDetail.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"ID001", "D123", "Mr.Duong", "SL3XL", "Lace underwear", "18/05/2022", "6", "50.000", "Pink color"},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Order ID", "Custtomer ID", "Customer Name", "Product ID", "Product Name", "Date", "Quantity", "Price", "Note"
-            }
-        ));
-        tbl_OrderDetail.setRowHeight(30);
-        jScrollPane4.setViewportView(tbl_OrderDetail);
-
-        btn_OrderDetail_export.setText("EXPORT");
+        jTabbedPane3.addTab("Order Management", jPanel11);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1225, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn_OrderDetail_export, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_OrderDetail_add, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_OrderDetail_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_OrderDetail_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61))))
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(537, 537, 537)
-                .addComponent(jLabel11)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 1270, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_OrderDetail_add, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_OrderDetail_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_OrderDetail_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_OrderDetail_export, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31))
+            .addGap(0, 638, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout Order_DetailsLayout = new javax.swing.GroupLayout(Order_Details);
-        Order_Details.setLayout(Order_DetailsLayout);
-        Order_DetailsLayout.setHorizontalGroup(
-            Order_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Order_DetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Order_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(Order_DetailsLayout.createSequentialGroup()
-                        .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
-                        .addComponent(cbo_OrderDetail_search, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        Order_DetailsLayout.setVerticalGroup(
-            Order_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Order_DetailsLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(Order_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cbo_OrderDetail_search))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        jTabbedPane3.addTab("Order Details", Order_Details);
+        jTabbedPane3.addTab("Order Details", jPanel13);
 
         javax.swing.GroupLayout pnl_OrderManagementLayout = new javax.swing.GroupLayout(pnl_OrderManagement);
         pnl_OrderManagement.setLayout(pnl_OrderManagementLayout);
@@ -1081,7 +931,9 @@ public class home extends javax.swing.JFrame {
         );
         pnl_OrderManagementLayout.setVerticalGroup(
             pnl_OrderManagementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(pnl_OrderManagementLayout.createSequentialGroup()
+                .addComponent(jTabbedPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 672, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pnl_Main.add(pnl_OrderManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
@@ -1446,7 +1298,6 @@ public class home extends javax.swing.JFrame {
         setColorMenuItem();
     }//GEN-LAST:event_btn_ExitMouseExited
 
-<<<<<<< HEAD
     private void cbo_IntergratedMana_chartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_IntergratedMana_chartActionPerformed
         // TODO add your handling code here:
         showChart();
@@ -1457,19 +1308,6 @@ public class home extends javax.swing.JFrame {
         showChart();
     }//GEN-LAST:event_cbo_IntergratedMana_yearActionPerformed
 
-=======
-    private void btn_OrderMana_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderMana_addActionPerformed
-        NewOrder no = new NewOrder();
-        no.show();
-    }//GEN-LAST:event_btn_OrderMana_addActionPerformed
-
-    private void btn_OrderDetail_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderDetail_addActionPerformed
-        NewOrder_Details nod = new NewOrder_Details();
-        nod.show();
-    }//GEN-LAST:event_btn_OrderDetail_addActionPerformed
-
-    
->>>>>>> Khanh
     /**
      * @param args the command line arguments
      */
@@ -1506,8 +1344,6 @@ public class home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Order_Details;
-    private javax.swing.JPanel Order_Management;
     private javax.swing.JButton btn_Account;
     private javax.swing.JButton btn_AccountManagement;
     private javax.swing.JButton btn_CustomerManagement;
@@ -1522,36 +1358,20 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton btn_InventoryManagement;
     private javax.swing.JButton btn_LogOut;
     private javax.swing.JButton btn_NextSlide;
-    private javax.swing.JButton btn_OrderDetail_add;
-    private javax.swing.JButton btn_OrderDetail_delete;
-    private javax.swing.JButton btn_OrderDetail_edit;
-    private javax.swing.JButton btn_OrderDetail_export;
-    private javax.swing.JButton btn_OrderMana_add;
-    private javax.swing.JButton btn_OrderMana_delete;
-    private javax.swing.JButton btn_OrderMana_edit;
     private javax.swing.JButton btn_OrderManagement;
     private javax.swing.JButton btn_PrevSlide;
     private javax.swing.JButton btn_Setting;
     private javax.swing.JButton btn_ShippingManagement;
-<<<<<<< HEAD
     private javax.swing.JComboBox<String> cbo_IntergratedMana_chart;
     private javax.swing.JComboBox<String> cbo_IntergratedMana_year;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JComboBox<String> jComboBox1;
-=======
-    private javax.swing.JComboBox<String> cbo_OrderDetail_search;
-    private javax.swing.JComboBox<String> cbo_OrderMana_OrderBy;
->>>>>>> Khanh
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-<<<<<<< HEAD
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
-=======
->>>>>>> Khanh
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel1;
@@ -1564,15 +1384,14 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel lbl_Email;
     private javax.swing.JLabel lbl_FullName;
     private javax.swing.JLabel lbl_ID;
     private javax.swing.JLabel lbl_ImageUser;
-    private javax.swing.JLabel lbl_OrderDetail_search;
-    private javax.swing.JLabel lbl_OrderMana_search;
     private javax.swing.JLabel lbl_Role;
     private javax.swing.JLabel lbl_Slide1;
     private javax.swing.JLabel lbl_Slide2;
@@ -1586,9 +1405,5 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_Menu;
     private javax.swing.JPanel pnl_OrderManagement;
     private javax.swing.JPanel pnl_Slide;
-    private javax.swing.JTable tbl_OrderDetail;
-    private javax.swing.JTable tbl_OrderMana;
-    private javax.swing.JTextField txt_OrderDetail_search;
-    private javax.swing.JTextField txt_OrderMana_search;
     // End of variables declaration//GEN-END:variables
 }
