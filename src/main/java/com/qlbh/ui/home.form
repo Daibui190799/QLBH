@@ -993,7 +993,23 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
                           <EmptySpace min="0" pref="449" max="32767" attributes="0"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          <EmptySpace min="0" pref="449" max="32767" attributes="0"/>
+=======
+                          <EmptySpace min="0" pref="443" max="32767" attributes="0"/>
+>>>>>>> Khanh
+=======
+                          <EmptySpace min="0" pref="448" max="32767" attributes="0"/>
+>>>>>>> parent of d96d543 (Hân)
+=======
+                          <EmptySpace min="0" pref="448" max="32767" attributes="0"/>
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
                           <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -1187,12 +1203,18 @@
                 </Container>
               </SubComponents>
             </Container>
+<<<<<<< HEAD
             <Container class="javax.swing.JPanel" name="pnl_IntergratedManagement">
+=======
+            <Container class="javax.swing.JPanel" name="pnl_OrderManagement">
+<<<<<<< HEAD
+>>>>>>> parent of b7fef1a (abc)
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+<<<<<<< HEAD
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="0" width="1270" height="670"/>
@@ -1306,6 +1328,10 @@
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="pnl_OrderManagement">
+=======
+=======
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                   <AbsoluteConstraints x="0" y="0" width="1270" height="670"/>

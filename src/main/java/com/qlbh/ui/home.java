@@ -720,7 +720,23 @@ public class home extends javax.swing.JFrame {
         pnl_HomeLayout.setVerticalGroup(
             pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_HomeLayout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(0, 449, Short.MAX_VALUE)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                .addGap(0, 449, Short.MAX_VALUE)
+=======
+                .addGap(0, 443, Short.MAX_VALUE)
+>>>>>>> Khanh
+=======
+                .addGap(0, 448, Short.MAX_VALUE)
+>>>>>>> parent of d96d543 (Hân)
+=======
+                .addGap(0, 448, Short.MAX_VALUE)
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(pnl_HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pnl_HomeLayout.createSequentialGroup()
@@ -730,6 +746,12 @@ public class home extends javax.swing.JFrame {
 
         pnl_Main.add(pnl_Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of b7fef1a (abc)
         pnl_IntergratedManagement.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -790,6 +812,13 @@ public class home extends javax.swing.JFrame {
 
         pnl_Main.add(pnl_IntergratedManagement, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1270, 670));
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of d96d543 (Hân)
+=======
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
         jTabbedPane3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
 
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1306,6 +1335,10 @@ public class home extends javax.swing.JFrame {
         setColorMenuItem();
     }//GEN-LAST:event_btn_ExitMouseExited
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of b7fef1a (abc)
     private void cbo_IntergratedMana_chartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_IntergratedMana_chartActionPerformed
         // TODO add your handling code here:
         showChart();
@@ -1316,6 +1349,28 @@ public class home extends javax.swing.JFrame {
         showChart();
     }//GEN-LAST:event_cbo_IntergratedMana_yearActionPerformed
 
+<<<<<<< HEAD
+=======
+
+    private void btn_OrderMana_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderMana_addActionPerformed
+        NewOrder no = new NewOrder();
+        no.show();
+    }//GEN-LAST:event_btn_OrderMana_addActionPerformed
+
+    private void btn_OrderDetail_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrderDetail_addActionPerformed
+        NewOrder_Details nod = new NewOrder_Details();
+        nod.show();
+    }//GEN-LAST:event_btn_OrderDetail_addActionPerformed
+
+    
+>>>>>>> Khanh
+=======
+    
+>>>>>>> parent of d96d543 (Hân)
+=======
+    
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
     /**
      * @param args the command line arguments
      */
@@ -1341,7 +1396,6 @@ public class home extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -1371,15 +1425,38 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JButton btn_PrevSlide;
     private javax.swing.JButton btn_Setting;
     private javax.swing.JButton btn_ShippingManagement;
+<<<<<<< HEAD
     private javax.swing.JComboBox<String> cbo_IntergratedMana_chart;
     private javax.swing.JComboBox<String> cbo_IntergratedMana_year;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    private javax.swing.JComboBox<String> cbo_IntergratedMana_chart;
+    private javax.swing.JComboBox<String> cbo_IntergratedMana_year;
+=======
+>>>>>>> parent of d96d543 (Hân)
+=======
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel3;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    private javax.swing.JLabel jLabel3;
+=======
+>>>>>>> parent of d96d543 (Hân)
+=======
+>>>>>>> parent of d96d543 (Hân)
+>>>>>>> parent of b7fef1a (abc)
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
