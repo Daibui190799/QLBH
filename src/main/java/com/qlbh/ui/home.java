@@ -1028,6 +1028,7 @@ public class home extends javax.swing.JFrame {
         // show form lên khi click vào menu
         pnl.setVisible(true);
     }
+<<<<<<< HEAD
 
     private void showChart() {
         if (cbo_IntergratedMana_chart.getSelectedIndex() != 0 && cbo_IntergratedMana_year.getSelectedIndex() != 0) {
@@ -1064,6 +1065,13 @@ public class home extends javax.swing.JFrame {
         }
     }
 
+=======
+    
+    private void showChart() {
+        
+    }
+     
+>>>>>>> khanh
     private void btn_HomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_HomeMouseEntered
         // TODO add your handling code here:
         hoverMenu(btn_Home, 41);
